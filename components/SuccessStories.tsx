@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 const successStories = [
   {
     quote:
-      'LegalConnect helped me find the perfect lawyer for my business needs. The process was smooth and efficient.',
+      'Peshkar helped me find the perfect lawyer for my business needs. The process was smooth and efficient.',
     author: '- John D., Small Business Owner',
   },
   {

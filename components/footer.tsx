@@ -6,9 +6,7 @@ export function Footer() {
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">
-              LegalConnect
-            </h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">Peshkar</h3>
             <p className="text-gray-400">
               Connecting lawyers and clients for better legal outcomes.
             </p>
@@ -93,7 +91,7 @@ export function Footer() {
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 text-center">
           <p className="text-gray-400">
-            &copy; {new Date().getFullYear()} LegalConnect. All rights reserved.
+            &copy; {new Date().getFullYear()} Peshkar. All rights reserved.
           </p>
         </div>
       </div>

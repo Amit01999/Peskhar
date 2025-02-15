@@ -1,21 +1,21 @@
-import type React from "react"
-import { Inter } from "next/font/google"
-import "./globals.css"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import type React from 'react';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: "LegalConnect - Connecting Lawyers and Clients",
-  description: "Find the right legal help for your needs",
-    generator: 'v0.dev'
-}
+  title: 'Peshkar - Connecting Lawyers and Clients',
+  description: 'Find the right legal help for your needs',
+  generator: 'v0.dev',
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -27,9 +27,7 @@ export default function RootLayout({
         </div>
       </body>
     </html>
-  )
+  );
 }
 
-
-
-import './globals.css'
+import './globals.css';
