@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 export function Header() {
   return (
     <header className="bg-background border-b">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center">
-          <img src="/Peshkar1.png" alt="Peshkar" width={120} height={85} />
+          <Image src="/Peshkar1.png" alt="Peshkar" width={120} height={85} />
         </Link>
         <nav>
           <ul className="flex space-x-8 items-center">
