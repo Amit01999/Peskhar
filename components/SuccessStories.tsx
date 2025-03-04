@@ -4,28 +4,28 @@ import React, { useEffect, useRef } from 'react';
 const successStories = [
   {
     quote:
-      'Peshkar helped me find the perfect lawyer for my business needs. The process was smooth and efficient.',
-    author: '- John D., Small Business Owner',
+      'পেশকার আমাকে আমার ব্যবসার জন্য উপযুক্ত আইনজীবী খুঁজতে সাহায্য করেছে। প্রক্রিয়াটি ছিল সহজ ও কার্যকর।',
+    author: '- জন দে., ছোট ব্যবসার মালিক',
   },
   {
     quote:
-      "As a lawyer, this platform has connected me with clients I wouldn't have reached otherwise. It's been great for growing my practice.",
-    author: '- Sarah L., Family Law Attorney',
+      'একজন আইনজীবী হিসেবে, এই প্ল্যাটফর্মটি আমাকে এমন ক্লায়েন্টদের সাথে সংযুক্ত করেছে যাদের কাছে আমি অন্যথায় পৌঁছাতে পারতাম না। এটি আমার পেশা বৃদ্ধির জন্য দারুণ সহায়ক হয়েছে।',
+    author: '- সারাহ লু., পারিবারিক আইন বিশেষজ্ঞ',
   },
   {
     quote:
-      'I was struggling with a legal issue, but through this platform, I found an expert lawyer who resolved my case quickly.',
-    author: '- Ahmed K., Freelancer',
+      'আমি একটি আইনি সমস্যায় পড়েছিলাম, কিন্তু এই প্ল্যাটফর্মের মাধ্যমে আমি একজন বিশেষজ্ঞ আইনজীবী পেয়েছি যিনি দ্রুত আমার কেস সমাধান করেছেন।',
+    author: '- আহমেদ করিম, ফ্রিল্যান্সার',
   },
   {
     quote:
-      'This service made it easy for me to get legal advice without the hassle of searching endlessly. Highly recommended!',
-    author: '- Maria R., Startup Founder',
+      'এই সেবার মাধ্যমে সহজেই আমি আইনি পরামর্শ পেয়েছি, অবিরাম খোঁজার ঝামেলা ছাড়াই। অত্যন্ত সুপারিশযোগ্য!',
+    author: '- মারিয়া রহমান, স্টার্টআপ প্রতিষ্ঠাতা',
   },
   {
     quote:
-      'As a corporate lawyer, I’ve gained new clients and expanded my network significantly through this platform.',
-    author: '- David T., Corporate Lawyer',
+      'একজন কর্পোরেট আইনজীবী হিসেবে, আমি এই প্ল্যাটফর্মের মাধ্যমে নতুন ক্লায়েন্ট পেয়েছি এবং আমার নেটওয়ার্ক ব্যাপকভাবে বৃদ্ধি পেয়েছে।',
+    author: '- দাউদ তাসনিম, কর্পোরেট আইনজীবী',
   },
 ];
 

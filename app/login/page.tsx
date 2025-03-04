@@ -14,7 +14,7 @@ export default function Login() {
   };
 
   return (
-    <section className="min-h-screen bg-black flex justify-center items-center py-12">
+    <section className="min-h-screen bg-[#111827] flex justify-center items-center py-12">
       <div className="bg-gray-800 text-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <h2 className="text-3xl font-extrabold text-center mb-6">
           Login to Your Account

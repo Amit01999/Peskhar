@@ -2,7 +2,7 @@ import React from 'react';
 
 const Services = () => {
   const services = [
-    { id: 1, title: 'Business Setup', icon: '📁' },
+    { id: 1, title: 'Business Setup', icon: '🚀' },
     { id: 2, title: 'Intellectual Property', icon: '🌐' },
     { id: 3, title: 'Litigation', icon: '📜' },
     { id: 4, title: 'Contract Drafting', icon: '🤝' },

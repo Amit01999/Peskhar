@@ -26,7 +26,6 @@ const lawyers = [
     rating: 4.5,
     imageUrl: '/placeholder.svg',
   },
-  // Add more mock lawyers here
 ];
 
 export function LawyerDirectory() {
@@ -43,48 +42,59 @@ export function LawyerDirectory() {
   );
 
   return (
-    <div className=" text-white min-h-screen py-8">
-      <div className="mb-6 flex flex-col md:flex-row gap-4">
-        <Input
-          type="text"
-          placeholder="Search by name"
-          value={searchTerm}
-          onChange={e => setSearchTerm(e.target.value)}
-          className="md:w-1/3 bg-gray-800 text-white placeholder-gray-400"
-        />
-        <Select
-          value={specialization}
-          onValueChange={setSpecialization}
-          className="md:w-1/3 bg-gray-800 text-white"
-        >
-          <option value="">All Specializations</option>
-          <option value="Family Law">Family Law</option>
-          <option value="Corporate Law">Corporate Law</option>
-          <option value="Criminal Law">Criminal Law</option>
-        </Select>
-        <Input
-          type="text"
-          placeholder="Location"
-          value={location}
-          onChange={e => setLocation(e.target.value)}
-          className="md:w-1/3 bg-gray-800 text-white placeholder-gray-400"
-        />
-      </div>
+    <div className="min-h-screen py-8 bg-gray-100">
+      <div className="container mx-auto px-4">
+        <div className="bg-white shadow-md rounded-lg p-6 md:p-8 mb-6">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">
+            Find a Lawyer
+          </h2>
+          <p className="text-center text-gray-600 mb-6">
+            Search for experienced lawyers by name, specialization, or location.
+          </p>
 
-      {filteredLawyers.length === 0 ? (
-        <p className="text-center text-gray-400">
-          No lawyers found with the given filters.
-        </p>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredLawyers.map(lawyer => (
-            <Card
-              key={lawyer.id}
-              className="bg-gray-800 text-white border border-gray-700 hover:border-gray-500"
+          {/* Filters Section */}
+          <div className="flex flex-col md:flex-row gap-4">
+            <Input
+              type="text"
+              placeholder="Search by name"
+              value={searchTerm}
+              onChange={e => setSearchTerm(e.target.value)}
+              className="md:w-1/3 w-full bg-white border border-gray-300 text-gray-800 placeholder-gray-500"
+            />
+            <Select
+              value={specialization}
+              onValueChange={setSpecialization}
+              className="md:w-1/3 w-full bg-white border border-gray-300 text-gray-800"
             >
-              <CardHeader>
-                <CardTitle className="flex items-center gap-4">
-                  <Avatar>
+              <option value="">All Specializations</option>
+              <option value="Family Law">Family Law</option>
+              <option value="Corporate Law">Corporate Law</option>
+              <option value="Criminal Law">Criminal Law</option>
+            </Select>
+            <Input
+              type="text"
+              placeholder="Location"
+              value={location}
+              onChange={e => setLocation(e.target.value)}
+              className="md:w-1/3 w-full bg-white border border-gray-300 text-gray-800 placeholder-gray-500"
+            />
+          </div>
+        </div>
+
+        {/* Lawyers List */}
+        {filteredLawyers.length === 0 ? (
+          <p className="text-center text-gray-500">
+            No lawyers found matching your criteria.
+          </p>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredLawyers.map(lawyer => (
+              <Card
+                key={lawyer.id}
+                className="bg-white shadow-lg hover:shadow-xl transition-shadow border border-gray-200 rounded-lg"
+              >
+                <CardHeader className="flex items-center gap-4 border-b border-gray-100 p-4">
+                  <Avatar className="w-12 h-12">
                     <AvatarImage src={lawyer.imageUrl} alt={lawyer.name} />
                     <AvatarFallback>
                       {lawyer.name
@@ -94,25 +104,31 @@ export function LawyerDirectory() {
                     </AvatarFallback>
                   </Avatar>
                   <div>
-                    <h3 className="text-lg font-semibold">{lawyer.name}</h3>
-                    <p className="text-sm text-gray-400">
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      {lawyer.name}
+                    </h3>
+                    <p className="text-sm text-gray-500">
                       {lawyer.specialization}
                     </p>
                   </div>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="mb-2">{lawyer.location}</p>
-                <div className="flex items-center">
-                  <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                  <span>{lawyer.rating.toFixed(1)}</span>
-                </div>
-                <Button className="w-full mt-4">View Profile</Button>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      )}
+                </CardHeader>
+                <CardContent className="p-4">
+                  <p className="text-gray-600 mb-2">{lawyer.location}</p>
+                  <div className="flex items-center text-yellow-500 mb-4">
+                    <Star className="w-4 h-4 mr-1" />
+                    <span className="text-gray-800">
+                      {lawyer.rating.toFixed(1)}
+                    </span>
+                  </div>
+                  <Button className="w-full bg-primary text-white hover:bg-primary-dark transition">
+                    View Profile
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
