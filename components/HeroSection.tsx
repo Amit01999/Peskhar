@@ -6,7 +6,7 @@ function HeroSection() {
   return (
     <div>
       <section
-        className="lg:h-[90vh] flex justify-center items-center text-center bg-cover bg-center relative py-12 md:py-16 px-4 md:px-8"
+        className="lg:h-[800px]  flex justify-center items-center text-center bg-cover bg-center relative py-12 md:py-16 px-4 md:px-8"
         style={{
           backgroundImage: `
       url('https://media.istockphoto.com/id/1330033671/photo/focus-on-hammer-group-of-files-on-judge-table-covered-with-dust-concept-of-pending-old-cases.jpg?s=612x612&w=0&k=20&c=4uSq3Yg1yhYHVOdw6xxW-twxLkjD5qcfC80hU01gif8=')
@@ -18,9 +18,9 @@ function HeroSection() {
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-3xl mx-auto text-white">
+        <div className="relative mt-20 md:mt-8 z-10 max-w-3xl mx-auto text-white">
           {/* Title */}
-          <h1 className="text-2xl md:text-5xl font-extrabold mb-3 md:mb-4 leading-tight">
+          <h1 className="text-2xl md:text-6xl font-extrabold mb-3 md:mb-6 leading-tight">
             Connecting You with the Right Legal Help
           </h1>
 
